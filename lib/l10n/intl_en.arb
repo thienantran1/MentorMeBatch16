@@ -1,0 +1,16 @@
+{
+  "@@locale" : "en",
+  "CreateAccount" : "Create Account",
+  "CreateAccountWith" : "Create account with",
+  "SignUpNotSupported" : "sign up is not supported",
+  "Or" : "Or",
+  "Congratulations" : "Congratulations",
+  "WaitLonger" : "Please wait a little longer",
+  "Name" : "Name",
+  "Email" : "Email",
+  "Password" : "Password",
+  "MustNotBeEmpty": "must not be empty",
+  "SignUp" : "Signup",
+  "AccountAlready": "Already have an account?",
+  "LogIn" : "Login"
+}
