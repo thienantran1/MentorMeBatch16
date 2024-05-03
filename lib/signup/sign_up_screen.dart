@@ -6,6 +6,8 @@ import 'package:batch16/gen/assets.gen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../generated/l10n.dart';
+
 
 class MyHome extends StatelessWidget {
   const MyHome({super.key});
@@ -40,14 +42,13 @@ class _HomeContent extends StatelessWidget {
                   SnackBar(
                     content:
                     // ignore: prefer_const_constructors
-                    Text('Github sign up is not supported')));
+                    Text("${state.provider} ${S.current.SignUpNotSupported}"))); //'Github sign up is not supported'
             }
             if (state is ShowDialogOnScreen) {
               showDialog(context: context, builder: (context) =>
                   AlertDialog(
-                    title: Text('Congratulations'),
-                    content: Text(
-                        'Please wait a little longer'),
+                    title: Text(S.current.Congratulations),
+                    content: Text(S.current.WaitLonger),
                   ),);
             }
           },
@@ -62,7 +63,7 @@ class _HomeContent extends StatelessWidget {
                                   children:[
                                     Padding(
                                       padding: const EdgeInsets.only(top: 12.0),
-                                      child: Text('Create Account', style: TextStyle(
+                                      child: Text(S.current.CreateAccount, style: TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.w500
                                       )),
@@ -76,7 +77,7 @@ class _HomeContent extends StatelessWidget {
                                       ),
                                     ),
                                     // ignore: prefer_const_constructors
-                                    Text('Create account with', style: TextStyle(
+                                    Text(S.current.CreateAccountWith, style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400
                                     )),
@@ -107,7 +108,7 @@ class _HomeContent extends StatelessWidget {
                                         builder: (context, state) {
                                           if (state is SignUpFailed) {
                                             if (state.provider == "Google"){
-                                            return Text('${state.provider} sign up is not supported');
+                                            return Text("${state.provider} ${S.current.SignUpNotSupported}");
                                             }
                                             return SizedBox.shrink(); 
                                           }
@@ -115,14 +116,14 @@ class _HomeContent extends StatelessWidget {
                                         }
                                     ),
                               
-                                    Text('Or', style: TextStyle(
+                                    Text(S.current.Or, style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400
                                     ),),
                               
                                     IconTextFieldRow(
                                         image: Assets.user.path, 
-                                        hint: 'Name',
+                                        hint: S.current.Name,
                                         onTextChange: (value) {
                                           print('name change $value');
                                           user_name = value;
@@ -131,7 +132,7 @@ class _HomeContent extends StatelessWidget {
 
                                     IconTextFieldRow(
                                         image: Assets.email.path, 
-                                        hint: 'Email',
+                                        hint: S.current.Email,
                                         onTextChange: (value) {
                                           print('email change $value');
                                           user_email = value;
@@ -139,7 +140,7 @@ class _HomeContent extends StatelessWidget {
                                       ),
                                     IconTextFieldRow(
                                       image: Assets.password.path, 
-                                      hint: 'Password',
+                                      hint: S.current.Password,
                                       suffiximage: Assets.showpassword.image(width: 43, height: 43),
                                       onTextChange: (value) {
                                           print('password change $value');
@@ -150,7 +151,7 @@ class _HomeContent extends StatelessWidget {
                                     BlocBuilder<SignUpCubit, SignUpState>(
                                       builder: (context, state) {
                                         if (state is  SignUpLackOfDetails){
-                                          return Text('${state.field} must not be empty');
+                                          return Text('${state.field} ${S.current.MustNotBeEmpty}');
                                           }
                                         return SizedBox.shrink();
                                       },
@@ -177,7 +178,7 @@ class _HomeContent extends StatelessWidget {
                                           borderRadius: BorderRadius.circular(7),
                                         ),
                                         child:
-                                        Text('Signup', style: TextStyle(
+                                        Text(S.current.SignUp, style: TextStyle(
                                           fontSize: 12,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.white,
@@ -185,19 +186,19 @@ class _HomeContent extends StatelessWidget {
                                       ),
                                     ),
                                     
-                                    Text('Or', style: TextStyle(
+                                    Text(S.current.Or, style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400
                                     ),),
 
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: Text('Already have an account?', style: TextStyle(
+                                      child: Text(S.current.AccountAlready, style: TextStyle(
                                           fontSize: 12,
                                           fontWeight: FontWeight.w400
                                       ),),
                                     ),
-                                    Text('Login', style: TextStyle(
+                                    Text(S.current.LogIn, style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w700,
                                         color: Colors.indigo
