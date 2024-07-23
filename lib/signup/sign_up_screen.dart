@@ -57,6 +57,28 @@ class _HomeContent extends StatelessWidget {
                   builder: (context) => SignUpLinkedIn(),
               ));
             }
+
+            if (state is SignUpCompleted) {
+              showDialog(context: context, builder: (context) {
+                return Material (
+                  child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text('Display: ${state.displayName}'),
+                        Text('Email: ${state.email}'),
+                        if (state.photoUrl != null)
+                          Image.network(
+                              state.photoUrl!,
+                              errorBuilder: (context, error, stackTrace) {
+                                return Text(
+                                    'error loading image ${error.toString()}');
+                              })
+                      ]
+                  )
+                );
+              }
+              );
+            }
           },
           child: Scaffold(
               body: SafeArea(

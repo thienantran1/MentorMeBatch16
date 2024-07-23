@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "45059207610",
+    "project_id": "todo-batch16-exercise",
+    "storage_bucket": "todo-batch16-exercise.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45059207610:android:1aa7df00c55edd76992d83",
+        "android_client_info": {
+          "package_name": "mentorme.batch16"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45059207610-usdfkhjk4j054cn3bohv1q0413nd927f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaop7iRN7bEDUp-ytXZ6uCU-j13prWRF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45059207610-usdfkhjk4j054cn3bohv1q0413nd927f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

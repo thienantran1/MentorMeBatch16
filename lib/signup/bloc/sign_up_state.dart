@@ -21,5 +21,13 @@ class SignUpLackOfDetails extends SignUpState{
   String field;
 
   SignUpLackOfDetails({required this.field});
+}
 
+// Successful state for GoogleSignIn
+class SignUpCompleted extends SignUpState {
+  final String displayName;
+  final String email;
+  final String? photoUrl;
+
+  SignUpCompleted({required this.displayName, required this.email, required this.photoUrl});
 }

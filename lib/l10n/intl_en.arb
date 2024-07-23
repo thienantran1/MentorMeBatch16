@@ -1,0 +1,29 @@
+{
+  "@@locale": "en",
+  "CreateAccount": "Create Account",
+  "CreateAccountWith": "Create account with",
+  "Or": "Or",
+  "Congratulations": "Congratulations",
+  "WaitLonger": "Please wait a little longer",
+  "Name": "Name",
+  "Email": "Email",
+  "Password": "Password",
+  "SignUp": "Signup",
+  "AccountAlready": "Already have an account?",
+  "LogIn": "Login",
+
+  "NotSupported": "{provider} sign up is not supported",
+  "@NotSupported": {
+    "placeholders": {
+      "provider": {}
+    }
+  },
+
+  "MustNotBeEmpty": "{field} must not be empty",
+  "@MustNotBeEmpty": {
+    "placeholders": {
+      "field": {}
+    }
+  }
+
+}
